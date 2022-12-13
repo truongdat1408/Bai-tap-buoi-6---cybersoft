@@ -1,5 +1,5 @@
 CREATE TABLE khach_hang(
-	ma_kh INT PRIMARY KEY,
+    ma_kh INT PRIMARY KEY,
     tai_khoan VARCHAR(50),
     mat_khau VARCHAR(50),
     email VARCHAR(50),
@@ -11,7 +11,7 @@ CREATE TABLE khach_hang(
 );
 
 CREATE TABLE don_hang(
-	ma_don_hang INT PRIMARY KEY,
+    ma_don_hang INT PRIMARY KEY,
     da_thanh_toan BOOLEAN,
     ngay_giao DATE,
     ngay_dat DATE,
@@ -21,19 +21,19 @@ CREATE TABLE don_hang(
 );
 
 CREATE TABLE chu_de(
-	ma_chu_de INT PRIMARY KEY,
+    ma_chu_de INT PRIMARY KEY,
     ten_chu_de VARCHAR(255)
 );
 
 CREATE TABLE nha_xuat_ban(
-	ma_nxb INT PRIMARY KEY,
-	ten_nxb VARCHAR(100),
+    ma_nxb INT PRIMARY KEY,
+    ten_nxb VARCHAR(100),
     dia_chi VARCHAR(255),
     dien_thoai VARCHAR(15)
 );
 
 CREATE TABLE sach(
-	ma_sach INT PRIMARY KEY,
+    ma_sach INT PRIMARY KEY,
     ten_sach VARCHAR(255),
     gia_ban DOUBLE,
     mo_ta LONGTEXT,
@@ -48,9 +48,9 @@ CREATE TABLE sach(
 );
 
 CREATE TABLE chi_tiet_don_hang(
-	ma_don_hang INT,
+    ma_don_hang INT,
     ma_sach INT,
-	so_luong INT,
+    so_luong INT,
     don_gia DOUBLE,
     
     FOREIGN KEY (ma_don_hang) REFERENCES don_hang(ma_don_hang),
@@ -58,7 +58,7 @@ CREATE TABLE chi_tiet_don_hang(
 );
 
 CREATE TABLE tac_gia(
-	ma_tac_gia INT PRIMARY KEY,
+    ma_tac_gia INT PRIMARY KEY,
     ten_tac_gia VARCHAR(100),
     dia_chi VARCHAR(100),
     tieu_su LONGTEXT,
@@ -66,7 +66,7 @@ CREATE TABLE tac_gia(
 );
 
 CREATE TABLE thong_tin_sach(
-	ma_tac_gia INT,
+    ma_tac_gia INT,
     ma_sach INT,
     vai_tro VARCHAR(50),
     vi_tri VARCHAR(50),

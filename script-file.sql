@@ -1,3 +1,6 @@
+CREATE DATABASE QLBanSach;
+USE QLBanSach;
+
 CREATE TABLE khach_hang(
     ma_kh INT PRIMARY KEY,
     tai_khoan VARCHAR(50),
